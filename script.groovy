@@ -7,7 +7,7 @@ def  pushImage(){
     passwordVariable: '10827685A', 
     usernameVariable: 'walach')
     ])
-    [sh "echo $passwordVariable | docker login -u $usernameVariable --password-stdin"
+    //[sh "echo $passwordVariable | docker login -u $usernameVariable --password-stdin"
     sh "docker push tp2:1.0.0"
     ]
     
