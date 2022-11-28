@@ -1,5 +1,5 @@
 def gv
-pipepline{
+pipeline{
     agent any 
     stages{
         stage("init"){
