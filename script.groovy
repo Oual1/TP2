@@ -7,14 +7,14 @@ def  pushImage(){
     passwordVariable: '10827685A', 
     usernameVariable: 'walach')
     ])
-    [sh "echo $PASS | docker login -u $USER --password-stdin"
+    [sh "echo $passwordVariable | docker login -u $usernameVariable --password-stdin"
     sh "docker push tp2:1.0.0"
     ]
     
 }
 def deployApp(){
     echo" deploy the application"
-    sh "echo $PASS | docker login -u $USER --password-stdin"
+    sh "echo $passwordVariable | docker login -u $usernameVariable --password-stdin"
     sh "docker pull tp2:1.0.0"
     sh "docker run tp2:1.0.0"
 
